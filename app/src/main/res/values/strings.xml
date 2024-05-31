@@ -1,11 +1,22 @@
 <resources>
     <string name="app_name">AI Story</string>
     <string name="ai_story_usage">AI 스토리 이용방법</string>
+    <string name="main_logo_description">Main logo</string>
+    <string name="home_image_description">Home image</string>
     <string name="login">로그인</string>
     <string name="signup">회원가입</string>
     <string name="email_hint">📨 이메일</string>
     <string name="password_hint">🔒 비밀번호</string>
     <string name="login_image_desc">로그인 이미지</string>
     <string name="google_login">구글로 로그인</string>
+    <string name="enter_name">이름</string>
+    <string name="enter_email">이메일</string>
+    <string name="enter_password">비밀번호</string>
+    <string name="enter_phone">전화번호</string>
+    <string name="sign_up">회원가입</string>
+    <string name="image_description">회원가입 이미지</string>
+    <string name="mypage_button_desc">My Page Button</string>
+    <string name="go_to_storybook_creation">동화책 만들러 가기</string>
+
 
 </resources>

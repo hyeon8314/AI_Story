@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="123dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/main_logo_description"
+        app:srcCompat="@drawable/main_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="-1dp" />
+
+    <Button
+        android:id="@+id/guide_btn"
+        android:layout_width="175dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="104dp"
+        android:backgroundTint="#d9d9d9"
+        android:text="@string/ai_story_usage"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="271dp"
+        android:layout_height="290dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/home_image_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guide_btn"
+        app:srcCompat="@drawable/home1" />
+
+    <ImageView
+        android:id="@+id/mypage_btn"
+        android:layout_width="49dp"
+        android:layout_height="91dp"
+        android:layout_margin="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:contentDescription="@string/mypage_button_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/list" />
+
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="231dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#d9d9d9"
+        android:text="@string/go_to_storybook_creation"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="137dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/author"
+        tools:layout_editor_absoluteX="195dp"
+        tools:layout_editor_absoluteY="574dp" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="83dp"
+        android:layout_height="21dp"
+        android:layout_weight="1"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="583dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
