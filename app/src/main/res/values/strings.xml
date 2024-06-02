@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">AI Story</string>
     <string name="ai_story_usage">AI 스토리 이용방법</string>
-    <string name="main_logo_description">Main logo</string>
-    <string name="home_image_description">Home image</string>
+    <string name="main_logo_description">메인 로고</string>
+    <string name="home_image_description">홈 이미지</string>
     <string name="login">로그인</string>
     <string name="signup">회원가입</string>
     <string name="email_hint">📨 이메일</string>
@@ -15,8 +15,10 @@
     <string name="enter_phone">전화번호</string>
     <string name="sign_up">회원가입</string>
     <string name="image_description">회원가입 이미지</string>
-    <string name="mypage_button_desc">My Page Button</string>
+    <string name="mypage_button_desc">마이 페이지 버튼</string>
     <string name="go_to_storybook_creation">동화책 만들러 가기</string>
-
-
+    <string name="login_after_select_storybook">로그인 후 나의 동화책 선택</string>
+    <string name="go_to_create_new_story">새로운 스토리 만들러 가기 선택</string>
+    <string name="enter_summary">줄거리 입력</string>
+    <string name="go_to_create_storybook">동화책 만들러 가기 선택</string>
 </resources>
