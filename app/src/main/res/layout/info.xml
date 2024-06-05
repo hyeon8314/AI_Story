@@ -9,7 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
             android:id="@+id/logo"
@@ -20,109 +22,97 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="253dp"
-        android:layout_height="53dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/story_info"
-        tools:layout_editor_absoluteY="96dp" />
-
     <LinearLayout
-        android:layout_width="393dp"
-        android:layout_height="475dp"
+        android:layout_width="404dp"
+        android:layout_height="623dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="149dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintVertical_bias="0.384">
+
+        <ImageView
+            android:id="@+id/guide"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="0dp"
+            app:srcCompat="@drawable/story_info" />
 
         <TextView
-            android:layout_width="330dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="52dp"
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/info_background"
             android:gravity="center_vertical"
-            android:padding="20dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
             android:text="로그인 후 나의 동화책 선택"
             android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
-
         <TextView
-            android:layout_width="330dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/info_background"
             android:gravity="center_vertical"
-            android:padding="20dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
             android:text="새로운 스토리 만들러 가기 선택"
             android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="330dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/info_background"
             android:gravity="center_vertical"
-            android:padding="20dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
             android:text="줄거리 입력"
             android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="330dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/info_background"
             android:gravity="center_vertical"
-            android:padding="20dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
             android:text="동화책 만들러 가기 선택"
             android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
+        <Button
+            android:id="@+id/story_write"
+            android:layout_width="149dp"
+            android:layout_height="43dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#fff628"
+            android:text="나의 동화책"
+            android:textColor="@color/black" />
+
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="283dp"
-        android:layout_height="66dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/story_with"
-        tools:layout_editor_absoluteY="616dp" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="149dp"
-        android:layout_height="43dp"
-        android:backgroundTint="#fff628"
-        android:text="나의 동화책"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="672dp" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
