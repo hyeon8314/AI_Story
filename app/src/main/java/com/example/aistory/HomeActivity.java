@@ -40,7 +40,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
-        signup_button = findViewById(R.id.Sign_btn);
+        signup_button = findViewById(R.id.signUp_btn);
         signup_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

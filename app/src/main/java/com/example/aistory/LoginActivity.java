@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
 
         networkManager = new NetworkManager();
 
-        signupBtn = findViewById(R.id.Sign_btn);
+        signupBtn = findViewById(R.id.signUp_btn);
         signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
