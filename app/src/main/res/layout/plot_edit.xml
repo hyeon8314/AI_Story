@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- 상단 로고 -->
+    <!-- 상단 로고 이미지 -->
     <ImageView
         android:id="@+id/logo"
         android:layout_width="140dp"
@@ -19,29 +19,27 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/main_logo" />
 
+    <!-- 스토리 아이디어 이미지 -->
     <ImageView
         android:id="@+id/plot_edit"
-        android:layout_width="381dp"
-        android:layout_height="77dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="316dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo"
-        app:srcCompat="@drawable/story_idea" />
+        app:srcCompat="@drawable/plot_edit" />
 
-
-
+    <!-- 이미지 버튼 -->
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="355dp"
         android:layout_height="350dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@id/plot_create"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/plot_edit"
-        app:layout_constraintVertical_bias="0.175">
+        app:layout_constraintTop_toBottomOf="@id/plot_edit">
 
     </ImageButton>
 
@@ -50,9 +48,9 @@
         android:layout_width="307dp"
         android:layout_height="46dp"
         android:layout_marginBottom="76dp"
-        android:background="@drawable/btn_2"
+        android:background="@drawable/btn_3"
         android:text="생성하기"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
