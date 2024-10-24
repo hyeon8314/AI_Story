@@ -2,6 +2,7 @@ package com.example.aistory.retrofit;
 
 import com.example.aistory.model.ApiResponse;
 import com.example.aistory.model.LoginRequest;
+import com.example.aistory.model.PlotRequest;
 import com.example.aistory.model.SignupRequest;
 
 import retrofit2.Call;
@@ -15,4 +16,7 @@ public interface ApiService {
 
     @POST("/api/user/login")
     Call<ApiResponse> login(@Body LoginRequest request);
+
+    @POST("/api/plot")
+    Call<ApiResponse> sendPlot(@Body PlotRequest plotRequest);
 }

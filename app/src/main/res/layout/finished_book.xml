@@ -67,7 +67,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
-            android:id="@+id/previousButton"
+            android:id="@+id/ttsButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/previous_image"

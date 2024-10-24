@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
                 networkManager.login(request, new NetworkManager.NetworkCallback() {
                     @Override
                     public void onSuccess(ApiResponse response) {
-                        Intent intent = new Intent(LoginActivity.this, MyPageActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, LoginHomeActivity.class);
                         startActivity(intent);
                         finish();  // 로그인 화면을 종료하여 백버튼으로 돌아가지 않게 합니다.
                     }
