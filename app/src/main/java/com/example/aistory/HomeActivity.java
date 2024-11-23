@@ -20,7 +20,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class HomeActivity extends AppCompatActivity {
-    private Button login_button, signup_button;
+    private Button login_button, signup_button, guide_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,26 +31,44 @@ public class HomeActivity extends AppCompatActivity {
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("test","로그인 클릭");
+                Log.d("HomeActivity", "로그인 클릭");
                 Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
                 startActivity(intent);
-
             }
         });
-
-
 
         signup_button = findViewById(R.id.signUp_btn);
         signup_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d("HomeActivity", "회원가입 클릭");
                 Intent intent = new Intent(HomeActivity.this, SignupActivity.class);
                 startActivity(intent);
             }
         });
 
-    }
+        guide_button = findViewById(R.id.guide_btn);
+        if (guide_button == null) {
+            Log.e("HomeActivity", "guide_button이 null입니다");
+        } else {
+            Log.d("HomeActivity", "guide_button이 정상적으로 초기화되었습니다");
+        }
 
+        guide_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("HomeActivity", "가이드 버튼이 클릭되었습니다");
+                try {
+                    Intent intent = new Intent(HomeActivity.this, InfoActivity.class);
+                    startActivity(intent);
+                    Log.d("HomeActivity", "InfoActivity로 전환을 시도합니다");
+                } catch (Exception e) {
+                    Log.e("HomeActivity", "InfoActivity 전환 중 오류 발생: " + e.getMessage());
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
 
     // 이름 이메일 비밀번호 전화번호
     private String signUp(String postData) {

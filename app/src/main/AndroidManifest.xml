@@ -13,14 +13,20 @@
         android:theme="@style/Theme.AIStory"
         tools:targetApi="31" >
 
+        <!-- IntroActivity를 첫 화면으로 설정 -->
         <activity
-            android:name=".HomeActivity"
+            android:name=".IntroActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- HomeActivity는 여전히 사용되지만 첫 화면은 아님 -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
 
         <activity
             android:name=".MainActivity"
@@ -32,6 +38,19 @@
         <activity android:name=".SignupActivity"></activity>
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".MyPageActivity"></activity>
+        <activity android:name=".LoginHomeActivity"></activity>
+        <activity android:name=".PlotActivity"></activity>
+        <activity android:name=".StoryActivity"></activity>
+        <activity android:name=".PlotCreateActivity"></activity>
+        <activity android:name=".InfoActivity" />
+        <activity android:name=".ModifyUserActivity"></activity>
+        <activity android:name=".MyBookActivity" />
+        <activity android:name=".FinishedBookActivity" />
+
+
+
+
+
 
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>

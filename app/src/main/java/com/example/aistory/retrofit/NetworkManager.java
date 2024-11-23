@@ -4,6 +4,9 @@ import com.example.aistory.model.ApiResponse;
 import com.example.aistory.model.LoginRequest;
 import com.example.aistory.model.PlotRequest;
 import com.example.aistory.model.SignupRequest;
+import com.example.aistory.model.Story;
+
+import java.util.List;
 
 import org.json.JSONObject;
 
@@ -16,7 +19,7 @@ public class NetworkManager {
     private ApiService apiService;
 
     public NetworkManager() {
-        apiService = ApiClient.getClient().create(ApiService.class);
+        apiService = ApiClient.getApiService();  // ApiClient.getClient() 대신 ApiClient.getApiService() 사용
     }
 
     public void signUp(SignupRequest request, NetworkCallback callback) {
@@ -46,7 +49,7 @@ public class NetworkManager {
                 if (response.isSuccessful() && response.body() != null) {
                     callback.onSuccess(response.body());
                 } else {
-                    callback.onError("응답실패: "+ response.code());
+                    callback.onError("응답실패: " + response.code());
                 }
             }
 
@@ -67,12 +70,9 @@ public class NetworkManager {
                 if (response.isSuccessful()) {
                     callback.onSuccess(response.body());
                 } else {
-                    // 응답이 실패했을 경우, 응답 바디를 파싱하여 에러 처리
                     try {
                         String errorBody = response.errorBody().string();
                         JSONObject errorJson = new JSONObject(errorBody);
-
-                        // OpenAI의 에러 코드 'content_policy_violation' 확인
                         String errorCode = errorJson.getJSONObject("error").getString("code");
                         if (errorCode.equals("content_policy_violation")) {
                             callback.onError("부적절한 콘텐츠를 생성할 수 없습니다.");
@@ -92,11 +92,32 @@ public class NetworkManager {
         });
     }
 
+    public void getStories(final GetStoriesCallback callback) {
+        Call<List<Story>> call = apiService.getStories();
+        call.enqueue(new Callback<List<Story>>() {
+            @Override
+            public void onResponse(Call<List<Story>> call, Response<List<Story>> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    callback.onSuccess(response.body());
+                } else {
+                    callback.onError("응답 실패: " + response.code());
+                }
+            }
 
+            @Override
+            public void onFailure(Call<List<Story>> call, Throwable t) {
+                callback.onError("네트워크 오류: " + t.getMessage());
+            }
+        });
+    }
 
-    // 네트워크 콜백 인터페이스 정의
     public interface NetworkCallback {
         void onSuccess(ApiResponse response);
+        void onError(String errorMessage);
+    }
+
+    public interface GetStoriesCallback {
+        void onSuccess(List<Story> stories);
         void onError(String errorMessage);
     }
 }
